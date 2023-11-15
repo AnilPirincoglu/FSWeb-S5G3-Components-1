@@ -139,8 +139,8 @@ const haberYapici = (obj) => {
   const btn = document.createElement("button");
   btn.className = "expandButton";
   btn.textContent = "+";
-  btn.addEventListener("click", () => {
-    btn.closest("div.article").classList.toggle("article-open");
+  btn.addEventListener("click", (event) => {
+    event.target.closest("div.article").classList.toggle("article-open");
   });
 
   container.append(baslik, tarih, p1, p2, p3, btn);
